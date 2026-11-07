@@ -17,11 +17,12 @@ python -m http.server 8000
 | Текстове, услуги, контакти, социални мрежи | `index.html` |
 | Цветове, шрифтове, оформление | `assets/css/styles.css` (променливите са в `:root`) |
 | Работно време за статуса „Работим в момента“ | `HOURS` в `assets/js/main.js` |
+| Връзки към портала и резервациите | `index.html` (търсете `portal.buladmin.eu` и `bookings.cloud.microsoft`) |
 | Имейл, към който води формата | `EMAIL` в `assets/js/main.js` |
 | Лога и икони | `assets/img/` |
 
 Работното време и контактите са записани и в JSON-LD блока в `<head>` на `index.html`. При промяна ги обновете и там.
 
-Нова услуга се добавя с нов ред `register__row` в `index.html` и нова опция в падащото меню на формата. Текстът на опцията трябва да съвпада със стойността на `data-service`.
+Нова услуга се добавя с нов ред `register__row` в `index.html`.
 
 Шрифтът Onest е под лиценз SIL OFL (`assets/fonts/OFL-onest.txt`).

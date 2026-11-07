@@ -102,7 +102,7 @@
   }
 
   function initReveal() {
-    var targets = document.querySelectorAll('.section__head, .register__row, .steps li, .paper, .scope, .contact__info');
+    var targets = document.querySelectorAll('.section__head, .register__row, .steps li, .paper, .contact__info');
     if (!('IntersectionObserver' in window)) return;
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
@@ -131,16 +131,6 @@
         step.classList.toggle('is-active', i === active);
       });
     }, 2200);
-  }
-
-  function initServiceLinks() {
-    var select = document.getElementById('f-service');
-    if (!select) return;
-    document.querySelectorAll('[data-service]').forEach(function (link) {
-      link.addEventListener('click', function () {
-        select.value = link.getAttribute('data-service');
-      });
-    });
   }
 
   function initForm() {
@@ -195,6 +185,5 @@
   initHeader();
   initReveal();
   initSheet();
-  initServiceLinks();
   initForm();
 })();
