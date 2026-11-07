@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Страницата не е намерена – БУЛАДМИН</title>
+  <meta name="description" content="Търсената страница не е намерена.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#10294c">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <!-- Стиловете и логото са вградени, за да изглежда страницата еднакво на всеки адрес. -->
+  <style>
+    @font-face { font-family: "Onest"; src: url("/assets/fonts/onest-cyrillic-wght.woff2") format("woff2"); font-weight: 100 900; font-display: swap; unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+    @font-face { font-family: "Onest"; src: url("/assets/fonts/onest-latin-wght.woff2") format("woff2"); font-weight: 100 900; font-display: swap; unicode-range: U+0000-00FF, U+2000-206F; }
+    :root { color-scheme: dark; --navy: #10294c; --navy-2: #1b3a66; --gold: #b5862a; --gold-soft: #e0b65e; --soft: rgb(255 255 255 / .78); --line: rgb(255 255 255 / .18); --ease: cubic-bezier(.2, .7, .2, 1); }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0; min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column;
+      background: radial-gradient(90% 70% at 50% 34%, var(--navy-2), var(--navy) 72%) var(--navy);
+      color: #fff; font: 400 1.0625rem/1.6 "Onest", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--gold-soft); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(100%, 1100px); margin-inline: auto; padding-inline: clamp(16px, 4vw, 48px); }
+
+    .top { padding-block: 16px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; text-decoration: none; }
+    .brand__tile { display: grid; place-items: center; width: 48px; height: 48px; background: #fff; border-radius: 10px; }
+    .brand__tile img { display: block; width: auto; height: 38px; }
+    .brand__word { font-weight: 600; font-size: 1.25rem; letter-spacing: .07em; }
+    .brand__word b { font-weight: 600; color: var(--gold-soft); }
+
+    main { flex: 1; display: flex; align-items: center; padding-block: clamp(16px, 4vh, 48px) clamp(32px, 6vh, 64px); }
+    .content { display: flex; flex-direction: column; align-items: center; text-align: center; }
+
+    .code {
+      display: flex; align-items: center; justify-content: center; gap: clamp(0px, 1vw, 12px);
+      font-size: clamp(7.5rem, 31vw, 15rem); font-weight: 700; line-height: 1; letter-spacing: -.04em;
+      animation: rise .8s var(--ease) both;
+    }
+    .code__zero { display: block; flex: none; width: .92em; height: .92em; margin-inline: -.02em; overflow: visible; }
+    .arc { transform-origin: 300px 300px; animation: sweep 1.2s var(--ease) .1s both; }
+    .arc--white { animation-delay: .22s; }
+    .doc { animation: rise .8s var(--ease) .25s both; }
+
+    h1 { margin: clamp(12px, 2vh, 24px) 0 0; font-size: clamp(1.9rem, 1.3rem + 2.6vw, 3.2rem); font-weight: 700; line-height: 1.1; letter-spacing: -.028em; text-wrap: balance; animation: rise .8s var(--ease) .08s both; }
+    .lead { max-width: 34em; margin: 16px 0 0; font-size: clamp(1.05rem, 1rem + .3vw, 1.2rem); line-height: 1.5; color: var(--soft); animation: rise .8s var(--ease) .14s both; }
+
+    .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 30px; animation: rise .8s var(--ease) .2s both; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 12px 26px;
+      border: 1.5px solid var(--gold-soft); border-radius: 6px; background: var(--gold-soft); color: var(--navy);
+      font-weight: 600; text-decoration: none; transition: background .2s, border-color .2s, color .2s, transform .2s var(--ease);
+    }
+    .btn:hover { background: #ecc875; border-color: #ecc875; transform: translateY(-2px); }
+    .btn--ghost { background: transparent; border-color: rgb(255 255 255 / .55); color: #fff; }
+    .btn--ghost:hover { background: #fff; border-color: #fff; color: var(--navy); }
+
+    .links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 clamp(14px, 3vw, 28px); margin: 22px 0 0; padding: 0; list-style: none; animation: rise .8s var(--ease) .26s both; }
+    .links a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 500; text-decoration: underline; text-decoration-color: var(--gold-soft); text-decoration-thickness: 2px; text-underline-offset: 5px; }
+    .links a:hover { color: var(--gold-soft); }
+
+    footer { padding-block: 16px 20px; border-top: 1px solid var(--line); font-size: .92rem; color: var(--soft); text-align: center; }
+    footer a { display: inline-flex; align-items: center; min-height: 44px; color: #fff; }
+
+    @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    @keyframes sweep { from { opacity: 0; transform: rotate(-22deg) scale(.94); } to { opacity: 1; transform: none; } }
+    @media (max-width: 420px) { .actions { width: 100%; } .btn { width: 100%; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="БУЛАДМИН – начало">
+        <span class="brand__tile"><img src="data:image/webp;base64,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" alt="" width="35" height="38"></span>
+        <span class="brand__word" aria-hidden="true">BUL<b>ADMIN</b></span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap content">
+      <div class="code" role="img" aria-label="Грешка 404">
+        <span aria-hidden="true">4</span>
+        <svg class="code__zero" viewBox="0 0 600 600" fill="none" aria-hidden="true">
+          <path class="arc" fill="#e0b65e" d="M118 142C28 214 10 360 112 456c86 80 226 100 336 62-120 16-246-14-318-92C64 354 58 236 118 142Z"/>
+          <path class="arc arc--white" fill="#ffffff" d="M60 452c78 104 230 142 356 96 112-42 172-150 134-266 14 104-52 190-150 232-116 50-256 22-340-62Z"/>
+          <g class="doc" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M212 96h134l92 96v218a22 22 0 0 1-22 22H212a22 22 0 0 1-22-22V118a22 22 0 0 1 22-22Z"/>
+            <path d="M340 100v72a22 22 0 0 0 22 22h72"/>
+            <path d="M242 262h136M242 316h136M242 370h84" stroke="#e0b65e"/>
+          </g>
+        </svg>
+        <span aria-hidden="true">4</span>
+      </div>
+
+      <h1>Страницата не е намерена</h1>
+      <p class="lead">Адресът може да е сгрешен или страницата вече да не съществува. Оттук можете да продължите към това, което търсите.</p>
+
+      <div class="actions">
+        <a class="btn" href="/">Към началната страница</a>
+        <a class="btn btn--ghost" href="https://bookings.cloud.microsoft/book/booking@buladmin.eu/">Безплатна консултация</a>
+      </div>
+
+      <ul class="links">
+        <li><a href="/#uslugi">Услуги</a></li>
+        <li><a href="/#kak-rabotim">Как работим</a></li>
+        <li><a href="/#kontakt">Контакт</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap"><a href="mailto:call@buladmin.eu">call@buladmin.eu</a></div>
+  </footer>
+</body>
+</html>
